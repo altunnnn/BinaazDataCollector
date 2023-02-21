@@ -6,20 +6,43 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class BinaJsoup {
     public static void main(String[] args) throws IOException {
         Document document = Jsoup.connect("https://bina.az/baki/alqi-satqi/menziller").get();
 
-        Elements pages = document.getElementsByAttribute("data-item-id");
-        String attr = pages.attr("data-item-id");
-        //System.out.println(attr);
+        Elements pages = document.select("div.items_list div.items-i");
+        System.out.println(pages);
+        Document document2;
+        Elements elements;
+        ArrayList<String> list = new ArrayList<>();
+        for (Element e:pages) {
 
-        Document document2 = Jsoup.connect("https://bina.az/items/" + attr).get();
-        Elements elements = document2.getElementsByClass("services-container");
-        String text = elements.get(0).getElementsByTag("h1").text();
+            String attr = e.attr("data-item-id");
+            list.add(attr);
 
-        System.out.println(text);
+            int size = list.size();
+            document2 = Jsoup.connect("https://bina.az/items/" + attr).get();
+            elements = document2.getElementsByClass("services-container");
+            String text = elements.get(0).getElementsByTag("h1").text();
+
+            System.out.println(text);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //        for (int i = 0; i < 10; i++) {
 //            int i1 = Integer.parseInt(attr);
 //           // i1 = i1 + i;

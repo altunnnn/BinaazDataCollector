@@ -1,8 +1,7 @@
 package com.example.binaazdatacollector.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Generated;
+import lombok.*;
 
 
 import java.io.Serializable;
@@ -10,6 +9,9 @@ import java.io.Serializable;
 @Entity
 @Data
 @Table(name = "binaentity")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class BinaEntity implements Serializable {
 
     @Id

@@ -6,14 +6,15 @@ import org.aspectj.apache.bcel.util.Repository;
 @Builder
 @Data
 public class BinaDto {
-    String menzil;
-    Long id;
-    String seher;
-    Integer sahe;
-    Double qiymet;
-    Integer unvan;
-    String rayon;
-    Integer otaqSayi;
-    Integer mertebe;
-    String temir;
+    public String menzil;
+    public Long id;
+    public String seher;
+    public Integer sahe;
+    public String qiymet;
+    public String unvan;
+    public String rayon;
+    public Boolean cixaris;
+    public Integer otaqSayi;
+    public Integer mertebe;
+    public String temir;
 }

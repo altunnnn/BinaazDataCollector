@@ -25,9 +25,11 @@ public class BinaEntity implements Serializable {
     @Column(name = "sahe")
     private Integer sahe;
     @Column(name = "qiymet")
-    private Double qiymet;
+    private String qiymet;
+    @Column(name = "cixaris")
+    private Boolean cixaris;
     @Column(name = "unvan")
-    private Integer unvan;
+    private String unvan;
     @Column(name = "rayon")
     private String rayon;
     @Column(name = "otaqSayi")

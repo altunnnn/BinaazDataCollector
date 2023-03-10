@@ -30,6 +30,8 @@ public class BinaService {
                 .rayon(dto.getRayon())
                 .sahe(dto.getSahe())
                 .seher(dto.getSeher())
+                .cixaris(dto.getCixaris())
+                .ipoteka(dto.getIpoteka())
                 .build();
 
 

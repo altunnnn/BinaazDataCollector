@@ -28,14 +28,16 @@ public class BinaEntity implements Serializable {
     private String qiymet;
     @Column(name = "cixaris")
     private Boolean cixaris;
+    @Column(name = "ipoteka")
+    private Boolean ipoteka;
     @Column(name = "unvan")
     private String unvan;
     @Column(name = "rayon")
     private String rayon;
     @Column(name = "otaqSayi")
-    private Integer otaqSayi;
+    private String otaqSayi;
     @Column(name = "mertebe")
-    private Integer mertebe;
+    private String mertebe;
     @Column(name = "temir")
     private String temir;
 
